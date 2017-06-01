@@ -1,0 +1,14 @@
+{
+    "name": "zapsterstudios/crud-generator",
+    "authors": [
+        {
+            "name": "ZapsterStudios",
+            "email": "andreas@zapsterstudios.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ZapsterStudios\\CrudGenerator\\": "src/"
+        }
+    },
+}
