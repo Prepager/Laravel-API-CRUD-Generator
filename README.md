@@ -7,3 +7,5 @@ Generate API CRUD bootstrap code.
 
 # Installation
 ``composer require zapsterstudios/crud-generator``
+
+``ZapsterStudios\CrudGenerator\PackageServiceProvider::class,``
