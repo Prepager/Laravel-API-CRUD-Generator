@@ -7,11 +7,12 @@ This package generates all the needed files and snippets for a CRUD (Create, Rea
 This includes: Model, Migration, Controller, Routes and Policy (Used for restricting route access).
 This package also takes care of validation with the $rules variable in the model.
 
-##Usage
+## Usage
 ``php artisan make:crud SomeModelName``
 
 ## Installation
 ### Install with Composer
+Run the following command.
 ``composer require zapsterstudios/crud-generator``
 
 ### Register ServiceProvider
@@ -20,8 +21,10 @@ Add the following class to the ``providers`` array in ``config/app.php``.
 
 ### Handle Policy AuthorizationException
 Add the following statement in the ``render`` function in ``app/Exceptions/Handler.php``.
-``if($exception instanceof \Illuminate\Auth\Access\AuthorizationException) {
+```php
+if($exception instanceof \Illuminate\Auth\Access\AuthorizationException) {
     if($request->expectsJson()) {
         return response()->json(['error' => 'Unauthenticated.'], 401);
     }
-}``
+}
+```
