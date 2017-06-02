@@ -13,11 +13,15 @@ This package also takes care of validation with the $rules variable in the model
 ## Installation
 ### Install with Composer
 Run the following command.
-``composer require zapsterstudios/crud-generator``
+```
+composer require zapsterstudios/crud-generator
+```
 
 ### Register ServiceProvider
 Add the following class to the ``providers`` array in ``config/app.php``.
-``ZapsterStudios\CrudGenerator\PackageServiceProvider::class,``
+```php
+ZapsterStudios\CrudGenerator\PackageServiceProvider::class,
+```
 
 ### Handle Policy AuthorizationException
 Add the following statement in the ``render`` function in ``app/Exceptions/Handler.php``.
