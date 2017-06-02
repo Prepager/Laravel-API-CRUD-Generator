@@ -1,0 +1,75 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyFullModelClass;
+use Illuminate\Http\Request;
+use DummyRootNamespaceHttp\Controllers\Controller;
+
+class DummyClass extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return DummyModelClass::index();
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $this->authorize('create', DummyModelClass::class);
+        $this->validate($request, DummyModelClass::rules);
+        
+        return DummyModelClass::create($request->except('_token', '_method'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \DummyFullModelClass  $DummyModelVariable
+     * @return \Illuminate\Http\Response
+     */
+    public function show(DummyModelClass $DummyModelVariable)
+    {
+        $this->authorize('view', $DummyModelVariable);
+        
+        return $DummyModelVariable;
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \DummyFullModelClass  $DummyModelVariable
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, DummyModelClass $DummyModelVariable)
+    {
+        $this->authorize('update', $DummyModelVariable);
+        $this->validate($request, DummyModelClass::rules);
+        
+        return $DummyModelVariable->update($request->except('_token', '_method'));
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \DummyFullModelClass  $DummyModelVariable
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(DummyModelClass $DummyModelVariable)
+    {
+        $this->authorize('delete', $DummyModelVariable);
+        
+        $DummyModelVariable->delete();
+    }
+}

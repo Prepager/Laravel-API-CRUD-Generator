@@ -1,0 +1,36 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+
+class DummyClass extends Model
+{
+    /**
+     * The model validation rules
+     *
+     * @var array
+     */
+    public static $rules = [
+        //
+    ];
+    
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        //
+    ];
+    
+    /**
+     * Retun the resources shown in the index route.
+     */
+    public static function index()
+    {
+        return DummyClass::all();
+    }
+    
+    //
+}
