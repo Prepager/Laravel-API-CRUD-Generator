@@ -2,8 +2,8 @@
 
 namespace ZapsterStudios\CrudGenerator\Commands;
 
-use Illuminate\Foundation\Console\ModelMakeCommand;
 use Illuminate\Support\Str;
+use Illuminate\Foundation\Console\ModelMakeCommand;
 
 class CrudModelMakeCommand extends ModelMakeCommand
 {
