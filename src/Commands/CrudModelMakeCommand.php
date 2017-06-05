@@ -3,7 +3,6 @@
 namespace ZapsterStudios\CrudGenerator\Commands;
 
 use Illuminate\Foundation\Console\ModelMakeCommand;
-
 use Illuminate\Support\Str;
 
 class CrudModelMakeCommand extends ModelMakeCommand
@@ -14,7 +13,7 @@ class CrudModelMakeCommand extends ModelMakeCommand
      * @var string
      */
     protected $name = 'crud:model';
-    
+
     /**
      * Get the stub file for the generator.
      *
@@ -24,7 +23,7 @@ class CrudModelMakeCommand extends ModelMakeCommand
     {
         return __DIR__.'/stubs/model.stub';
     }
-    
+
     /**
      * Create a controller for the model.
      *
@@ -35,7 +34,7 @@ class CrudModelMakeCommand extends ModelMakeCommand
         $controller = Str::studly(class_basename($this->argument('name')));
         $modelName = $this->qualifyClass($this->getNameInput());
         $this->call('crud:controller', [
-            'name' => "{$controller}Controller",
+            'name'    => "{$controller}Controller",
             '--model' => $this->option('resource') ? $modelName : null,
         ]);
     }
