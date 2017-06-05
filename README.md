@@ -1,6 +1,7 @@
 [![Total Downloads](https://poser.pugx.org/zapsterstudios/crud-generator/downloads)](https://packagist.org/packages/zapsterstudios/crud-generator)
 [![Latest Stable Version](https://poser.pugx.org/zapsterstudios/crud-generator/v/stable)](https://packagist.org/packages/zapsterstudios/crud-generator)
 [![License](https://poser.pugx.org/zapsterstudios/crud-generator/license)](https://packagist.org/packages/zapsterstudios/crud-generator)
+[![StyleCI](https://styleci.io/repos/93081424/shield)](https://styleci.io/repos/93081424)
 
 # Laravel-API-CRUD-Generator
 This package generates all the needed files and snippets for a CRUD (Create, Read, Update and Delete) API endpoint.
