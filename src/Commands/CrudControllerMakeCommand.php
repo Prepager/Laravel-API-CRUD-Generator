@@ -12,7 +12,7 @@ class CrudControllerMakeCommand extends ControllerMakeCommand
      * @var string
      */
     protected $name = 'crud:controller';
-    
+
     /**
      * Get the stub file for the generator.
      *
