@@ -29,7 +29,7 @@ Add the following statement in the ``render`` function in ``app/Exceptions/Handl
 ```php
 if($exception instanceof \Illuminate\Auth\Access\AuthorizationException) {
     if($request->expectsJson()) {
-        return response()->json(['error' => 'Unauthenticated.'], 401);
+        return response()->json(['error' => 'Forbidden.'], 403);
     }
 }
 ```
